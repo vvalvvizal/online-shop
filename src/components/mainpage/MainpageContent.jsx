@@ -9,7 +9,7 @@ function MainpageContent() {
         <p>Info</p>
       </div>
       <div className={sytles.title}>
-        <h1>my online shop</h1>
+        <h1>my online shop </h1>
       </div>
       <div className={sytles.box}></div>
     </div>
