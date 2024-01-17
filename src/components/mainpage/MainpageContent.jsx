@@ -11,7 +11,11 @@ function MainpageContent() {
       <div className={sytles.title}>
         <h1>my online shop </h1>
       </div>
-      <div className={sytles.box}></div>
+      <div className={sytles.box}>
+        <div className={sytles["box-img1"]}></div>
+        <div className={sytles["box-img2"]}></div>
+        <div className={sytles["box-img3"]}></div>
+      </div>
     </div>
   );
 }

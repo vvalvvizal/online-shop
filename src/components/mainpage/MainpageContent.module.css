@@ -1,7 +1,7 @@
 .title {
   width: 118px;
-  height: 142px;
-  transform: translate(-130%, 30%);
+  height: 150px;
+  transform: translate(-170%, 0%);
 }
 .title h1 {
   color: #000;
@@ -16,17 +16,46 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: transparent;
-  height: 750px;
+  height: 100%;
 }
 
 .box {
   margin-top: 180px;
-  width: 417px;
-  height: 280px;
+  width: 500px;
+  height: 400px;
   background: #e9e9e9;
+  display: flex;
+  flex-direction: row;
 }
 
+.box-img1 {
+  margin-left: 25px;
+  margin-top: 5%;
+  width: 100%;
+  height: 88%;
+  background: url(./img/main_img1.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.box-img2 {
+  margin-left: 15px;
+  margin-top: 5%;
+  width: 100%;
+  height: 88%;
+  background: url(./img/main_img2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.box-img3 {
+  margin-top: 5%;
+  width: 100%;
+  height: 88%;
+  background: url(./img/main_img3.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .circle {
   transform: translateX(90%);
   border-radius: 50%;
