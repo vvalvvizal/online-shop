@@ -1,10 +1,11 @@
 import sytles from "./MainpageContent.module.css";
+import { Link } from "react-router-dom";
 
 function MainpageContent() {
   return (
     <div className={sytles.container}>
       <div className={sytles.circle}>
-        <p>login/join</p>
+        {/* <Link to="/login">Login/Join</Link> */}
         <p>Cart</p>
         <p>Info</p>
       </div>
