@@ -9,5 +9,5 @@ app.get("/api", (req, res) => {
 });
 
 server.listen(8080, () => {
-  console.log("server is running on 8080");
+  console.log("server is running on 8080!");
 });
