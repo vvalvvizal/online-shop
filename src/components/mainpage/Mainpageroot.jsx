@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import MainpageConent from "./MainpageContent";
 function Mainpageroot() {
   const [userID, setuserID] = useState([]);
