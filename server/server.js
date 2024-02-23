@@ -1,13 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const server = require("http").createServer(app);
+const PORT = 3001;
 app.use(cors());
 
+const userdata = [{ user: "id" }];
 app.get("/api", (req, res) => {
-  res.send({ message: "connect" });
+  res.json(userdata);
 });
-
-server.listen(8080, () => {
-  console.log("server is running on 8080!");
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

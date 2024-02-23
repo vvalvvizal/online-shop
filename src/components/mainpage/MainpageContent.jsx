@@ -1,5 +1,4 @@
 import sytles from "./MainpageContent.module.css";
-import { Link } from "react-router-dom";
 
 function MainpageContent() {
   return (
