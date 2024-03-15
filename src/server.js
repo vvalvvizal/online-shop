@@ -21,15 +21,15 @@ MongoConnect();
 // 사용자 데이터 모델 정의
 const { User } = require("./user");
 
-// 라우트 - 사용자 데이터
+// 라우트 - 모든 사용자 데이터 가져오기
 app.get("/api/users", (req, res) => {
   User.find({})
-    .then((users) => {
-      res.send(users);
+    .then((data) => {
+      res.json(data); // 사용자 데이터를 JSON 형식으로 클라이언트에게 전송
     })
     .catch((err) => {
-      console.error("Failed to fetch users", err);
-      res.status(500).send("Failed to fetch users");
+      console.error("Failed to fetch users:", err);
+      res.status(500).json({ error: "Failed to fetch users" });
     });
 });
 
