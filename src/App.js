@@ -2,6 +2,8 @@ import "./App.css";
 import MainpageContent from "./components/mainpage/MainpageContent";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import LoginPage from "./components/loginpage/Loginpageroot";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   useEffect(() => {
@@ -19,7 +21,12 @@ function App() {
 
   return (
     <div className="App">
-      <MainpageContent />
+      <Router>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<MainpageContent />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

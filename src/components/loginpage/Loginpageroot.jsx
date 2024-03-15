@@ -1,56 +1,42 @@
-// import React, { useState } from "react";
-// import { useDispatch } from "react-redux";
-// import { loginUser } from "../../../_actions/user_action";
+import React, { useState } from "react";
 
-// function LoginPageroot() {
-//   const dispatch = useDispatch();
-//   const [Email, setEmail] = useState("");
-//   const [Password, setPassword] = useState("");
+function LoginPage() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-//   const onEmailHandler = (event) => {
-//     setEmail(event.currentTarget.value);
-//   };
-//   const onPasswordHandler = (event) => {
-//     setPassword(event.currentTarget.value);
-//   };
-//   const onSubmitHandler = (event) => {
-//     // 버튼만 누르면 리로드 되는것을 막아줌
-//     event.preventDefault();
+  const handleLogin = () => {
+    // 로그인 처리 로직을 작성하십시오.
+    console.log("Username:", username);
+    console.log("Password:", password);
+    // 여기에 실제 로그인 처리를 추가할 수 있습니다.
+  };
 
-//     console.log("Email", Email);
-//     console.log("Password", Password);
+  return (
+    <div>
+      <h2>Login</h2>
+      <form onSubmit={handleLogin}>
+        <div>
+          <label htmlFor="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  );
+}
 
-//     let body = {
-//       email: Email,
-//       password: Password,
-//     };
-
-//     dispatch(loginUser(body));
-//   };
-
-//   return (
-//     <div
-//       style={{
-//         display: "flex",
-//         justifyContent: "center",
-//         alignItems: "center",
-//         width: "100%",
-//         height: "100vh",
-//       }}
-//     >
-//       <form
-//         style={{ display: "flex", flexDirection: "column" }}
-//         onSubmit={onSubmitHandler}
-//       >
-//         <label>Email</label>
-//         <input type="email" value={Email} onChange={onEmailHandler} />
-//         <label>Password</label>
-//         <input type="password" value={Password} onChange={onPasswordHandler} />
-//         <br />
-//         <button formAction="">Login</button>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default LoginPageroot;
+export default LoginPage;
