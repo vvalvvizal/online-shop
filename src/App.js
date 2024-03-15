@@ -8,7 +8,7 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await axios.get("http://localhost:3001/api/users");
-        console.log(response); // 받은 데이터 확인
+        console.log(response.data); // 받은 데이터 확인
       } catch (error) {
         console.error("Error", error);
       }
