@@ -12,8 +12,17 @@ function MainpageContent() {
             Login/Join
           </Link>
         </p>
-        <p>Cart</p>
-        <p>Info</p>
+        <p>
+          <Link to="/cart" style={{ textDecoration: "none", color: "inherit" }}>
+            Cart
+          </Link>
+        </p>
+        <p>
+          {" "}
+          <Link to="/info" style={{ textDecoration: "none", color: "inherit" }}>
+            Info
+          </Link>
+        </p>
       </div>
       <div className={sytles.title}>
         <h1>my online shop </h1>

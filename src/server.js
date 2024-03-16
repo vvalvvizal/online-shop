@@ -19,10 +19,11 @@ const MongoConnect = async () => {
 MongoConnect();
 
 // 사용자 데이터 모델 정의
-const { User } = require("./user");
+const { User } = require("./schema/user");
+const { Item } = require("./schema/item");
 
 // 라우트 - 모든 사용자 데이터 가져오기
-app.get("/api/users", (req, res) => {
+app.get("/users", (req, res) => {
   User.find({})
     .then((data) => {
       res.json(data); // 사용자 데이터를 JSON 형식으로 클라이언트에게 전송
@@ -30,6 +31,18 @@ app.get("/api/users", (req, res) => {
     .catch((err) => {
       console.error("Failed to fetch users:", err);
       res.status(500).json({ error: "Failed to fetch users" });
+    });
+});
+
+app.get("/cart", (req, res) => {
+  //cart로 들어가면 item 반환
+  Item.find({})
+    .then((data) => {
+      res.json(data); // 사용자 데이터를 JSON 형식으로 클라이언트에게 전송
+    })
+    .catch((err) => {
+      console.error("Failed to fetch items:", err);
+      res.status(500).json({ error: "Failed to fetch items" });
     });
 });
 
