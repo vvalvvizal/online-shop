@@ -8,3 +8,7 @@ Runs the app in the development mode.
 온라인쇼핑몰 만들기 
 
 # React
+
+# Node.js
+
+# MongoDB 
