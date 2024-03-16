@@ -35,7 +35,7 @@ app.get("/users", (req, res) => {
 });
 
 app.get("/cart", (req, res) => {
-  //cart로 들어가면 item 반환
+  //일단 cart로 들어가면 item collections 값들 반환
   Item.find({})
     .then((data) => {
       res.json(data); // 사용자 데이터를 JSON 형식으로 클라이언트에게 전송
