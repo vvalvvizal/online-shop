@@ -1,7 +1,14 @@
 # How to use
 
+Front: 
 `npm start`
 Runs the app in the development mode.
+
+Back : 
+'node server.js'
+
+DB :
+'mongod' 
 
 # Online-shop
 
@@ -12,3 +19,4 @@ Runs the app in the development mode.
 # Node.js
 
 # MongoDB 
+server 7.0 
